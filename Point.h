@@ -5,12 +5,15 @@
 #ifndef CIRCLESANDPOINTS_POINT_H
 #define CIRCLESANDPOINTS_POINT_H
 
+#include <string>
+
 
 class Point {
     friend class Circle;
 public:
     Point(double x, double y);
     virtual ~Point();
+    std::string toString();
 
 private:
     double x;

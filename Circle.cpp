@@ -4,6 +4,7 @@
 
 #include "Circle.h"
 #include <sstream>
+#include <cmath>
 
 Circle::Circle(double x, double y, double r) {
     this->x = x;
@@ -25,4 +26,9 @@ std::string Circle::toString() {
     s+=", ";
     s+= ss2.str();
     return s;
+}
+
+double Circle::getDistance(Point *point) {
+    double distanceWithRadius = sqrt(pow(point->x - x, 2) + pow(point->y - y,2));
+    return distanceWithRadius - r;
 }
