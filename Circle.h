@@ -7,15 +7,15 @@
 
 #include "Point.h"
 #include <string>
+#include "Circle.h"
 
+class Point;;
 class Circle {
-
 public:
     Circle(double x, double y, double r);
     virtual ~Circle();
     std::string toString();
-public:
-    double getDistance(Point *point);
+    friend double getDistance(Point *point, Circle *circle);
 
 private:
     double x;

@@ -8,6 +8,6 @@ int main() {
     Point* p = new Point(2,2);
     cout << c->toString() << endl;
     //cout << p->toString() << endl;
-    cout << c->getDistance(p);
+    cout << getDistance(p, c);
     return 0;
 }

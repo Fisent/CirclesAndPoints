@@ -6,14 +6,16 @@
 #define CIRCLESANDPOINTS_POINT_H
 
 #include <string>
+#include "Circle.h"
 
 
+class Circle;
 class Point {
-    friend class Circle;
 public:
     Point(double x, double y);
     virtual ~Point();
     std::string toString();
+    friend double getDistance(Point *point, Circle *circle);
 
 private:
     double x;

@@ -28,7 +28,9 @@ std::string Circle::toString() {
     return s;
 }
 
-double Circle::getDistance(Point *point) {
-    double distanceWithRadius = sqrt(pow(point->x - x, 2) + pow(point->y - y,2));
-    return distanceWithRadius - r;
+
+
+double getDistance(Point *point, Circle *circle) {
+    double distanceWithRadius = sqrt(pow(point->x - circle->x, 2) + pow(point->y - circle->y,2));
+    return distanceWithRadius - circle->r;
 }
